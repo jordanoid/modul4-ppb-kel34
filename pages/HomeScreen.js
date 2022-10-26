@@ -1,5 +1,5 @@
 import { View, Text, Image, FlatList, StyleSheet } from "react-native";
-import { data } from "../common/Data";
+import { dataUser } from "../common/Data";
 
 function HomeScreen() {
   const ListItemNama = (dataPassing) => {
@@ -43,7 +43,7 @@ function HomeScreen() {
       <FlatList
         showsVerticalScrollIndicator={false}
         legacyImplementation={false}
-        data={data}
+        data={dataUser}
         renderItem={({ item }) => <ListItemNama dataNama={item} />}
         keyExtractor={(item) => item.id}
         style={styles.flatlist}
