@@ -12,7 +12,11 @@ function HomeScreen() {
         }
       >
         <View>
-          <View style={styles.itemListLine} />
+          <View style={
+            dataPassing.dataNama.id % 2 === 1 
+            ? styles.oddItemListLine
+            : styles.evenItemListLine           
+          } />
         </View>
         <View style={styles.itemListContent}>
           <Text style={styles.itemListText}>
@@ -96,8 +100,13 @@ const styles = StyleSheet.create({
   itemListContent: {
     marginLeft: 10
   },
-  itemListLine: {
-    backgroundColor: "#06283D",
+  oddItemListLine: {
+    backgroundColor: "#68BB59",
+    width: 5,
+    height: "80%"
+  },
+  evenItemListLine: {
+    backgroundColor: "#ACDF87",
     width: 5,
     height: "80%"
   },

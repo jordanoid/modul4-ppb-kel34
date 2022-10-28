@@ -46,7 +46,8 @@ function ProfileScreen() {
         <Text style={styles.headerText}>
           {data.name}
         </Text>
-        <Text style={styles.headerTextDesc}>{data.login}</Text>
+        <Text style={styles.headerTextDesc}>{"GitHub : " + data.login}</Text>
+        <Text style={styles.headerTextDesc}>{"Public Repositories : " + data.public_repos}</Text>
         <Text style={styles.headerTextDesc}>{data.company}</Text>
         <Text style={styles.headerTextDesc}>{data.location}</Text>
       </View>
